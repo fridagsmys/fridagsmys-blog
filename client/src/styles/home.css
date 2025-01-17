@@ -1,0 +1,18 @@
+.carousel-indicator {
+    background-color: #DFDED1;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-indicator.active {
+    background-color: #E43D12;
+}
+
+.btn:is(input[type="radio"]:checked) {
+    background-color: #E43D12;
+    border-color: #E43D12;
+}
+
+.btn:is(input[type="radio"]) {
+    background-color: #DFDED1;
+    border-color: #DFDED1;
+}
