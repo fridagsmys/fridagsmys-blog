@@ -20,7 +20,7 @@ const ConnectCto = () => {
         <input
           type="text"
           placeholder="Enter Your Email"
-          className="input input-bordered w-full max-w-xs sm:input-sm"
+          className="input input-bordered bg-primary border-primary w-full max-w-xs sm:input-sm"
           value={email}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             setEmail(e.target.value);

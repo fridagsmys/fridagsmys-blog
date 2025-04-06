@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Blog from "./pages/Blog";
 import Post from "./pages/Post";
 import About from "./pages/About";
+import GamePage from "./pages/GamePage";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<Post />} />
         <Route path="/about" element={<About />} />
+        <Route path="/game" element={<GamePage />} />
       </Routes>
       <footer>
         <Footer />

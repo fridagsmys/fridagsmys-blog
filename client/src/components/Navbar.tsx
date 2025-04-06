@@ -44,8 +44,13 @@ const Navbar: React.FC = () => {
         </div>
         <ul
           tabIndex={0}
-          className="dropdown-content menu bg-base-100 rounded-box w-40 z-[1] p-2 shadow"
+          className="dropdown-content menu bg-base-100 rounded-box w-40 z-10 p-2 shadow"
         >
+          <li>
+            <Link to="/" className="hover:text-accent hover:bg-base-100 text-lg">
+              Home
+            </Link>
+          </li>
           <li>
             <Link to="/blog" className="hover:text-accent hover:bg-base-100 text-lg">
               Blog

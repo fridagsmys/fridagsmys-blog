@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import dummyBlogData from "../dummyData";
 import BlogCard from "../components/BlogCard";
 import Marquee from "react-fast-marquee";
+import { motion } from "motion/react";
 
 interface Blog {
   id: number;
@@ -47,21 +48,27 @@ const Blog: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 flex flex-col gap-y-8">
+    <div className="container mx-auto px-4 flex flex-col gap-y-8 mb-16">
       <h1 className="text-7xl font-bold text-center mb-8 mt-4 sm:text-8xl md:text-9xl">
         THE BLOG.
       </h1>
       <div className="flex flex-col gap-y-8">
         <Marquee autoFill={true}>
-          <h2 className="text-3xl font-semibold text-secondary md:px-6">
+          <h2 className="text-3xl font-semibold text-secondary px-4 md:px-6">
             Recent Posts
           </h2>
         </Marquee>
         <div className="flex flex-col gap-8 sm:flex-row sm:flex-wrap sm:px-4 md:flex-col md:flex-nowrap md:px-0 md:w-full">
           {posts.map((post) => (
-            <div key={post.id} className="sm:w-[calc(50%-16px)] md:w-full md:flex md:justify-center">
+            <motion.div
+              key={post.id}
+              className="sm:w-[calc(50%-16px)] md:w-full md:flex md:justify-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
               <BlogCard key={post.id} post={post} />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

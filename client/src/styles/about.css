@@ -1,0 +1,8 @@
+.vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.vertical2 {
+    writing-mode: vertical-rl;
+}
