@@ -16,3 +16,7 @@
     background-color: #DFDED1;
     border-color: #DFDED1;
 }
+
+.botCheck {
+    display: none;
+}

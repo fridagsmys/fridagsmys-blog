@@ -343,11 +343,11 @@ const About: React.FC = () => {
       </div>
 
       {/* lil picture */}
-      <div className="flex">
+      <div className="flex w-full lg:justify-end">
         <motion.img
           src={picart}
           alt="A drawing of a woman eith brown hair"
-          className="w-1/3 m-auto"
+          className="w-1/3 m-auto sm:w-1/4 md:w-1/5 lg:w-32 lg:mr-12"
         />
       </div>
     </div>

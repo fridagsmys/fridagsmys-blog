@@ -15,9 +15,9 @@ const Footer: React.FC = () => {
 
         {/* Navigation links */}
         <div className="flex flex-col items-start gap-4 lg:flex-row lg:gap-x-16">
-          <Link to="/blog" className="hover:text-accent">
+          {/* <Link to="/blog" className="hover:text-accent">
             Blog
-          </Link>
+          </Link> */}
           <Link to="/projects" className="hover:text-accent">
             Projects
           </Link>
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
         {/* Social media icons */}
         <div className="flex gap-4 mt-6 lg:mt-0">
           <a
-            href="https://github.com"
+            href="https://github.com/fridagsmys"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent"
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
             </svg>
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/frida-alstergren-6b6102227/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent"

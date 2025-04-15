@@ -7,6 +7,8 @@ import Blog from "./pages/Blog";
 import Post from "./pages/Post";
 import About from "./pages/About";
 import GamePage from "./pages/GamePage";
+import Connect from "./pages/Connect";
+import Projects from "./pages/Projects";
 
 const App = () => {
   return (
@@ -16,14 +18,14 @@ const App = () => {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/connect" element={<Connect />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<Post />} />
-        <Route path="/about" element={<About />} />
         <Route path="/game" element={<GamePage />} />
       </Routes>
-      <footer>
         <Footer />
-      </footer>
     </Router>
   );
 };
