@@ -8,6 +8,8 @@ import ConnectCto from "../components/ConnectCto";
 import dummyBlogData from "../dummyData";
 import Blog from "./Blog";
 import { motion } from "motion/react";
+import ProjectsShowcase from "../components/ProjectsShowcase";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   const [mostRecentPost, setMostRecentPost] = useState<Blog | null>(null);
@@ -52,9 +54,9 @@ const Home: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          maximus condimentum tellus in dictum. Sed molestie arcu aliquam
-          pharetra sollicitudin. Sed vestibulum egestas purus in fermentum.
+          I'm a curious and creative fullstack developer who enjoys solving
+          problems and learning new things. I love working on projects that
+          combine design, functionality, and user experience.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -62,11 +64,11 @@ const Home: React.FC = () => {
           transition={{ duration: 0.5, delay: 2 }}
         >
           <motion.button
-            className="btn btn-secondary mt-4 text-base-100 hover:bg-accent hover:border-accent sm:btn-sm sm:text-xs"
+            className="btn btn-secondary mt-4 text-white hover:bg-accent hover:border-accent sm:btn-sm sm:text-xs"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Let's connect
+            <Link to="/connect" className="flex items-center h-full">Let's connect</Link>
           </motion.button>
         </motion.div>
       </motion.div>
@@ -92,7 +94,7 @@ const Home: React.FC = () => {
       </motion.div>
 
       {/* Blog section */}
-      <div className="px-4 py-12 flex flex-col gap-y-4 sm:items-center sm:w-full sm:mx-auto lg:mx-0 lg:w-full">
+      {/* <div className="px-4 py-12 flex flex-col gap-y-4 sm:items-center sm:w-full sm:mx-auto lg:mx-0 lg:w-full">
         <div className="border-y-4 border-black mx-auto w-full">
           <Marquee autoFill={true}>
             <span className="px-4 sm:text-sm">LATEST POST</span>
@@ -112,10 +114,13 @@ const Home: React.FC = () => {
             <span className="px-4 sm:text-sm">LATEST POST</span>
           </Marquee>
         </div>
-      </div>
+      </div> */}
 
       {/* Services */}
       <Services />
+
+      {/* Projects */}
+      <ProjectsShowcase />
 
       {/* Testimonials */}
       <Testimonials />

@@ -34,10 +34,11 @@ export default function Testimonials() {
     };
   }, []);
 
-  const scrollToItem = (id: string) => {
+  const scrollToItem = (id: string, index: number) => {
     const target = document.getElementById(id);
     if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
+      target.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      setActive(index)
     }
   };
 
@@ -55,10 +56,11 @@ export default function Testimonials() {
             className="carousel-item flex flex-col justify-center w-4/5 bg-primary gap-4 p-8 lg:w-1/2"
           >
             <h3 className="text-black sm:text-sm">
-              "Working with Frida was an absolute pleasure. Her attention to
-              detail and commitment to excellence is unparalleled."
+              "Alright, alright, alright."
             </h3>
-            <i className="text-black text-end sm:text-sm">- John Doe</i>
+            <i className="text-black text-end sm:text-sm">
+              - Matthew McConaughey
+            </i>
           </div>
           <div
             data-index="1"
@@ -66,10 +68,18 @@ export default function Testimonials() {
             className="carousel-item flex flex-col justify-center w-4/5 bg-primary gap-4 p-8 lg:w-1/2"
           >
             <h3 className="text-black sm:text-sm">
-              "Frida has an incredible ability to solve complex problems while
-              maintaining a focus on user experience."
+              "Junior developers can be molded. Seniors can have
+              baggage.Juniors, fresh, will be very open to following best
+              practices and standards you set up. A senior may have
+              philosophical difference on implementation and standards. It is
+              easy to tell a junior dev, we follow API standards using REST
+              principles that are only nouns for URI endpoints. Where as a
+              senior may want to use multiple verbs which is anti-pattern for
+              us."
             </h3>
-            <i className="text-black text-end sm:text-sm">- Jane Smith</i>
+            <i className="text-black text-end sm:text-sm">
+              - Magnus, collegue at previous internship
+            </i>
           </div>
           <div
             data-index="2"
@@ -77,29 +87,34 @@ export default function Testimonials() {
             className="carousel-item flex flex-col justify-center w-4/5 bg-primary gap-4 p-8 lg:w-1/2"
           >
             <h3 className="text-black sm:text-sm">
-              "Frida's designs and solutions are innovative and truly
-              user-friendly."
+              "Oh wow, you made a website? Can you fix my wi-fi?"
             </h3>
-            <i className="text-black text-end sm:text-sm">- Alex Johnson</i>
+            <i className="text-black text-end sm:text-sm">- My Dad</i>
           </div>
         </div>
         <div className="flex w-full justify-center gap-2 py-2">
           <button
-            onClick={() => scrollToItem("item1")}
+            onClick={() => scrollToItem("item1", 0)}
             className={`radio btn h-2 min-h-2 w-8 ${
-              active === 0 ? "btn-active bg-accent border-accent" : "border-primary"
+              active === 0
+                ? "btn-active bg-accent border-accent"
+                : "border-primary"
             }`}
           ></button>
           <button
-            onClick={() => scrollToItem("item2")}
+            onClick={() => scrollToItem("item2", 1)}
             className={`radio btn h-2 min-h-2 w-8 ${
-              active === 1 ? "btn-active bg-accent border-accent" : "border-primary"
+              active === 1
+                ? "btn-active bg-accent border-accent"
+                : "border-primary"
             }`}
           ></button>
           <button
-            onClick={() => scrollToItem("item3")}
+            onClick={() => scrollToItem("item3", 2)}
             className={`radio btn h-2 min-h-2 w-8 ${
-              active === 2 ? "btn-active bg-accent border-accent" : "border-primary"
+              active === 2
+                ? "btn-active bg-accent border-accent"
+                : "border-primary"
             }`}
           ></button>
         </div>

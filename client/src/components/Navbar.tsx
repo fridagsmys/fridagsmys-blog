@@ -10,8 +10,11 @@ const Navbar: React.FC = () => {
 
       {/* Desktop */}
       <div className="hidden lg:flex lg:gap-x-16 lg:mx-auto">
-        <Link to="/blog" className="hover:text-accent">
+        {/* <Link to="/blog" className="hover:text-accent">
           Blog
+        </Link> */}
+        <Link to="/" className="hover:text-accent">
+          Home
         </Link>
         <Link to="/projects" className="hover:text-accent">
           Projects
@@ -51,11 +54,11 @@ const Navbar: React.FC = () => {
               Home
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/blog" className="hover:text-accent hover:bg-base-100 text-lg">
               Blog
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               to="/projects"
